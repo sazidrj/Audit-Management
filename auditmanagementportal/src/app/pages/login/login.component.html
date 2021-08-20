@@ -1,0 +1,52 @@
+
+<div class="bootstrap-wrapper mt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 center">
+                <div class="container text-center bgError" *ngIf="invalidUser===true"><p>Invalid Username and Password!!</p></div>
+            <mat-card>
+                <div class="container text-center">
+                    <!-- <img class="imgw" src="../../../assets/images/logo.png" alt="AuditManagement" /> -->
+                </div>
+                <h1>Sign-in to your account</h1>
+
+            
+                <form #f = "ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
+                    <!-- Project Name field-->
+                    <mat-form-field class="full-width spacing"appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="userCredentials.userId"
+                        name="userId"
+                        #un="ngModel"
+                        matInput placeholder="Enter Username"
+                        >
+                         <mat-hint *ngIf="un.touched && !un.valid" >Username Required</mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width spacing"appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input
+                        required
+                        [(ngModel)]="userCredentials.password"
+                        name="password"
+                        #up="ngModel"
+                        type="password"
+                        matInput placeholder="Enter Password">
+                        <mat-hint alert alert-danger *ngIf="up.touched && !up.valid">Password Required</mat-hint>
+                    </mat-form-field>
+
+                    
+                    <div class="container text-center">
+
+                        <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">Login</button>   
+                    
+                    </div>
+
+                </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

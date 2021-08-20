@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(to right, #1d976c,  #dabcf6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+   table#table1 {
+    /*background-color:white;*/
+    position:fixed;
+    margin-left:-150px; /* half of width */
+    margin-top:-150px;  /* half of height */
+    top:50%;
+    left:50%;
+    height:150px;
+  }
+
+  .bold{
+    font-weight:bold;
+  }
+
+  .redDot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .greenDot{
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+
+  }
+
+  .ml90{
+    margin-left:90px;
+    margin-right:90px
+  }
+
+  .mt{
+    margin-top:150px
+  }
+
+  h1{
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
+    color: #3f3b3b;
+    margin-bottom: 40px;
+  }
+
+  table td{
+    border: 1px solid rgb(126, 124, 124);
+  }

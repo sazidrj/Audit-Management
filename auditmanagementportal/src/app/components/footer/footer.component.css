@@ -1,0 +1,25 @@
+footer {
+    clear: both;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    
+    background-color:#b3b3b3;
+    
+}
+.full-width{
+    width: 100%;
+}
+    
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.mr{
+      margin-right: 100px;
+  }
+
+a{
+    color: rgba(250, 253, 255, 0.952);
+}
+

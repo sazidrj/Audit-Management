@@ -1,0 +1,10 @@
+insert into Audit_Questions values(1,'internal','Have all Change requests followed SDLC before PROD move?','NO');
+insert into Audit_Questions values(2,'internal','Have all Change requests been approved by the application owner? ','NO');
+insert into Audit_Questions values(3,'internal','Are all artifacts like CR document, Unit test cases available? ','NO');
+insert into Audit_Questions values(4,'internal','Is the SIT and UAT sign-off available? ','NO');
+insert into Audit_Questions values(5,'internal','Is data deletion from the system done with application owner approval? ','NO');
+insert into Audit_Questions values(6,'sox','Have all Change requests followed SDLC before PROD move?','NO');
+insert into Audit_Questions values(7,'sox','Have all Change requests been approved by the application owner? ','NO');
+insert into Audit_Questions values(8,'sox','For a major change, was there a database backup taken before and after PROD move? ','NO');
+insert into Audit_Questions values(9,'sox','Has the application owner approval obtained while adding a user to the system? ','NO');
+insert into Audit_Questions values(10,'sox','Is data deletion from the system done with application owner approval? ','NO');

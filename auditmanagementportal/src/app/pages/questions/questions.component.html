@@ -1,0 +1,43 @@
+<div class="bootstrap-wrapper mt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                 <mat-card>
+                    <h3 class="m-4 display-4 text-center"></h3>
+                    
+                    <h1 class="text-center">{{auditType.auditType.toUpperCase()}}</h1>
+                    <form  #f = "ngForm" (ngSubmit)="onSubmit()">
+                       
+                      <table class="table" >
+                        <!-- <thead>
+                          <tr>
+                            <th scope="col">QuestionsID</th>
+                            <th scope="col">AuditID</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Response</th>
+                          </tr>
+                        </thead > -->
+                        <tbody *ngFor = "let question of questionsList; let i = index">
+                          <tr scope="row">
+                            <th >{{i+1}}</th>
+                            <!-- <td>{{question.auditType}}</td> -->
+                            <td>{{question.question}}</td>
+                            <td>
+                            <mat-radio-group [(ngModel)] = "question.response" name={{question.questionId}} #res="ngModel" required>
+                              <mat-radio-button value="yes" class="mr5">Yes</mat-radio-button>
+                              <mat-radio-button value="no">No</mat-radio-button>
+                            </mat-radio-group>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                            <!-- <input type="Submit" value="Submit" class="btn btn-primary btn-block mt-3 right" /> -->
+                            <div class="container text-center">
+                              <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">Submit</button>   
+                            </div>
+                    </form>                
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

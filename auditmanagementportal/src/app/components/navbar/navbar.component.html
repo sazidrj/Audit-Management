@@ -1,0 +1,29 @@
+
+<mat-toolbar color="primary">
+    <a 
+      routerLink="/"
+      mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>design_services</mat-icon>
+    </a>
+    <span>Audit Management</span>
+    <span class="spacer"></span>
+    <a
+    *ngIf="!loggedIn"
+     mat-icon-button
+     [routerLink]="'/login'"
+     class="example-icon mr"
+    >
+    Login
+    </a>
+    <a *ngIf="loggedIn" mat-icon-button class="example-icon mr" >
+     Welcome {{user}}
+    </a>
+    <a
+    *ngIf="loggedIn" (click)="logoutUser()"
+     mat-icon-button
+     class="example-icon mr"
+    >
+     Logout
+    </a>
+
+  </mat-toolbar>

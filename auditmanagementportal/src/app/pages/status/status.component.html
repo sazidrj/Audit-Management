@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper mt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                 <mat-card>
+                    <h3 class="m-4 display-4 text-center"></h3>
+                    
+
+                       
+                        <table class="table">
+                            <thead>
+                                 <h1> Audit Request Response </h1>
+                            </thead>
+                            <tbody>
+                            <tr scope="col">
+                                <td class="bold" >Execution Status</td>
+                                <td *ngIf="statusObj.projectExecutionStatus=='RED'" scope="col"><span class="redDot"></span></td>
+                                <td *ngIf="statusObj.projectExecutionStatus=='GREEN'" scope="col"><span class="greenDot"></span></td>
+                            </tr>
+                        
+                                <tr scope=row>
+                                    <td class="bold">Remedial Action</td>
+                                    <td >{{statusObj.remedialActionDuration}}</td>   
+                                </tr> 
+                            </tbody>  
+                        </table>
+                        <div class="container text-center">
+
+                            <button type="submit" mat-raised-button color="primary" (click)="newAudit()">Home</button>   
+                        
+                        </div>
+                                
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

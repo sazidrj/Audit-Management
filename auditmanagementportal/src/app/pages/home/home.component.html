@@ -1,0 +1,85 @@
+<div class="bootstrap-wrapper mt50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <mat-card class="center">
+                <div class="container text-center">
+                    <!-- <img class="imgw" src="../../../assets/images/logo.png" alt="AuditManagement" /> -->
+                </div>
+                <h1 class="text-center">Project Details</h1>
+
+                 
+                <form #f="ngForm" (ngSubmit)="onSubmit()">
+                    <!-- Project Name field-->
+                    <mat-form-field class="full-width spacing"appearance="outline">
+                        <mat-label>Project Name</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]= "ProjectDetails.projectName"                      
+                        name="projectName"
+                        #pn= "ngModel"
+                        matInput placeholder="Project Name">
+                        <mat-hint *ngIf="pn.touched && !pn.valid" >Project Name Required</mat-hint>
+                    </mat-form-field>
+
+                    <!-- Project Manager field-->
+                    <mat-form-field class="full-width spacing"appearance="outline">
+                        <mat-label>Project Manager Name</mat-label>
+                        <input
+                        required
+                        [(ngModel)]= "ProjectDetails.projectManagerName"
+                        name="projectManagerName"
+                        #pmn="ngModel"
+                        matInput placeholder="Project Manager Name">
+                        <mat-hint  *ngIf="pmn.touched && !pmn.valid" >Project Manager Name Required</mat-hint>
+                    </mat-form-field>
+
+                    <!-- Application Owner-->
+                    <mat-form-field class="full-width spacing"appearance="outline">
+                        <mat-label>Application Owner</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]= "ProjectDetails.applicationOwnerName"
+                        name = "applicationOwnerName"
+                        #aon= "ngModel"
+                        matInput placeholder="Application Owner">
+                        <mat-hint *ngIf="aon.touched && !aon.valid" >Application Owner Name Required</mat-hint>
+                    </mat-form-field>
+
+                    <div class="example-container">
+                        
+                         
+                          <div>
+                            <label>Audit Type: </label>
+                            <mat-radio-group
+                            [(ngModel)]= "AuditType.auditType"
+                            name="auditType"
+                            #at="ngModel"
+                            required
+                            >
+                              <mat-radio-button value="internal">Internal</mat-radio-button>
+                              <mat-radio-button value="sox">SOX</mat-radio-button>                              
+                            </mat-radio-group>
+                           
+                          </div>
+                        
+                    </div>
+                    
+                    <div class="container text-center">
+
+                        <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid" >Submit</button>   
+                    
+                    </div>
+
+                </form>
+                </mat-card>
+
+               
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
